@@ -56,7 +56,7 @@ const useAxios = () => {
             api.interceptors.request.eject(requestInterceptor);
             api.interceptors.response.eject(responseInterceptor);
         };
-    }, [auth, setAuth]);
+    }, []);
 
     return { api };
 };
