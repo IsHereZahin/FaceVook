@@ -1,8 +1,17 @@
-export default function MyPosts(){
+import React from "react";
+import { useProfile } from "../../hooks/useProfile";
+import PostList from "../posts/PostList";
+
+const MyPosts = () => {
+    const { state } = useProfile();
+    const posts = state?.posts;
+
     return (
-        <div className="flex flex-col items-center justify-center h-full">
-            <h1 className="text-2xl font-bold mb-4">My Posts</h1>
-            <p className="text-gray-500">No posts available.</p>
-        </div>
+        <>
+            <h4 className="mt-6 text-xl lg:mt-8 lg:text-2xl">Your Posts</h4>
+            <PostList posts={posts} />
+        </>
     );
-}
+};
+
+export default MyPosts;
