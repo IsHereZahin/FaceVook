@@ -3,6 +3,8 @@ import { useAuth } from '../hooks/useAuth';
 import useAxios from '../hooks/useAxios';
 import { useProfile } from '../hooks/useProfile';
 import { actions } from '../actions';
+import ProfileInfo from '../components/profile/ProfileInfo';
+import MyPosts from '../components/profile/myPosts';
 
 export default function ProfilePage() {
     const {state, dispatch} = useProfile();
@@ -36,12 +38,9 @@ export default function ProfilePage() {
     if (state?.error) return <div>Error loading profile: {state?.error.message}</div>;
 
     return (
-        <div>
-            WelCome, {state?.user?.firstName} {state?.user?.lastName}!
-            <p>
-                Email: {state?.user?.email}
-            </p>
-            <p>{state?.posts?.length}</p>
-        </div>
+        <>
+            <ProfileInfo />
+            <MyPosts />
+        </>
     );
 }
