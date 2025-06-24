@@ -514,6 +514,14 @@
       "avatar": "uploads/avatar/avatar-1708802845791-219561000.png",
       "email": "rambo@email.com",
       "bio": "I am Rambo!!!"
+    },
+    {
+      "id": "632c6dab-54b1-4601-ba4a-e694b8d533bc",
+      "password": "$2b$08$S0WDCKAG7EeEkdJQ0tvXTuwTRj9KUpID43bBjK4K6/0ShTqbBvH5e",
+      "firstName": "John",
+      "lastName": "Doe",
+      "avatar": null,
+      "email": "john@example.com"
     }
   ]
 }
